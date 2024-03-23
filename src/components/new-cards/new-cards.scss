@@ -1,0 +1,26 @@
+.new-card{
+    max-width: 500px;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 1px 1px 5px #d9d7d7;
+    img{
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        height: 200px;
+        max-width: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .new-card__info{
+        padding: 20px;
+        .card-data{
+            margin-top: 10px;
+            color: gray;
+        }
+        p{
+            margin-top: 5px;
+            font-family: sans-serif !important;
+        }
+    }
+    
+}
