@@ -1,18 +1,18 @@
 import { Component } from 'react';
 import NewCards from '../new-cards/newCards';
-import New from '../data/new';
 import "./news.scss"
 
 export class News extends Component {
   render() {
+    const {languageData:t } = this.props;
     return (
       <section id="news">
         <div className="container">
-          <h2>Новости</h2>
+          <h2>{t.newsTitle}</h2>
           <div className="new-cards">
-            {New.map((card) => <NewCards {...card}></NewCards>)}
+            {t.New.map((card) => <NewCards {...card}></NewCards>)}
           </div>
-          <button>Все новости</button>
+          <button>{t.newsBtn}</button>
         </div>
       </section>
     )

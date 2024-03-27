@@ -1,14 +1,18 @@
 import { Component } from "react";
 import "./header.scss";
 // import { isVisible } from "@testing-library/user-event/dist/utils";
+// import { toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 export class Header extends Component {
   state = {
     isDark:false , 
     isVisible:false
   }
+  
   render() {
-    const { changeLanguage } = this.props;
+    const { changeLanguage , languageData: t } = this.props;
     const {isDark , isVisible} = this.state;
     const changeMode = () =>{
       document.body.classList.toggle('dark');
@@ -18,83 +22,85 @@ export class Header extends Component {
       this.setState({isVisible: !isVisible})
       console.log(isVisible);
     }
+    // const notify = () => toast("Wow so easy!");
     return (
       <div className="header">
+        {/* <button onClick={notify}>Notify!</button> */}
         <div className="navbar container">
           <div className="nav-left">
             <img className="header-logo" src="/logo.svg" alt="logo" />
             <ul>
               <li className="dropdown">
                 <a className="dropbtn" href="#product">
-                  Продукция
+                  {t.products}
                 </a>
                 <div className="dropdown-content">
-                  <a href="sd">Ламинатные тубы</a>
-                  <a href="sd">Экструзионные тубы</a>
-                  <a href="sd">Другая упаковка</a>
+                  <a href="sd">{t.dropDownContent1}</a>
+                  <a href="sd">{t.dropDownContent2}</a>
+                  <a href="sd">{t.dropDownContent3}</a>
                 </div>
               </li>
               <span className="line"></span>
               <li className="dropdown">
-                <a className="dropbtn" href="#certificate">Сертификаты</a>
+                <a className="dropbtn" href="#certificate">{t.certificate}</a>
                 <div className="dropdown-content">
-                  <a href="sd">Ламинатные тубы</a>
-                  <a href="sd">Экструзионные тубы</a>
-                  <a href="sd">Другая упаковка</a>
+                  <a href="sd">{t.dropDownContent1}</a>
+                  <a href="sd">{t.dropDownContent2}</a>
+                  <a href="sd">{t.dropDownContent3}</a>
                 </div>
               </li>
               <span className="line"></span>
               <li className="dropdown">
-                <a className="dropbtn" href="#command">Наша команда</a>
+                <a className="dropbtn" href="#command">{t.command}</a>
                 <div className="dropdown-content">
-                  <a href="sd">Ламинатные тубы</a>
-                  <a href="sd">Экструзионные тубы</a>
-                  <a href="sd">Другая упаковка</a>
+                  <a href="sd">{t.dropDownContent1}</a>
+                  <a href="sd">{t.dropDownContent2}</a>
+                  <a href="sd">{t.dropDownContent3}</a>
                 </div>
               </li>
               <span className="line"></span>
               <li className="dropdown">
-                <a className="dropbtn" href="#about">О нас</a>
+                <a className="dropbtn" href="#about">{t.about}</a>
                 <div className="dropdown-content">
-                  <a href="sd">Ламинатные тубы</a>
-                  <a href="sd">Экструзионные тубы</a>
-                  <a href="sd">Другая упаковка</a>
+                  <a href="sd">{t.dropDownContent1}</a>
+                  <a href="sd">{t.dropDownContent2}</a>
+                  <a href="sd">{t.dropDownContent3}</a>
                 </div>
               </li>
               <span className="line"></span>
               <li className="dropdown">
-                <a className="dropbtn" href="#news">Новости</a>
+                <a className="dropbtn" href="#news">{t.news}</a>
                 <div className="dropdown-content">
-                  <a href="sd">Ламинатные тубы</a>
-                  <a href="sd">Экструзионные тубы</a>
-                  <a href="sd">Другая упаковка</a>
+                  <a href="sd">{t.dropDownContent1}</a>
+                  <a href="sd">{t.dropDownContent2}</a>
+                  <a href="sd">{t.dropDownContent3}</a>
                 </div>
               </li>
               <span className="line"></span>
               <li className="dropdown">
-                <a className="dropbtn" href="#vacancy">Вакансии</a>
+                <a className="dropbtn" href="#vacancy">{t.vacancy}</a>
                 <div className="dropdown-content">
-                  <a href="sd">Ламинатные тубы</a>
-                  <a href="sd">Экструзионные тубы</a>
-                  <a href="sd">Другая упаковка</a>
+                  <a href="sd">{t.dropDownContent1}</a>
+                  <a href="sd">{t.dropDownContent2}</a>
+                  <a href="sd">{t.dropDownContent3}</a>
                 </div>
               </li>
               <span className="line"></span>
               <li className="dropdown">
-                <a className="dropbtn" href="#contact">Контакты</a>
+                <a className="dropbtn" href="#contact">{t.contact}</a>
                 <div className="dropdown-content">
-                  <a href="sd">Ламинатные тубы</a>
-                  <a href="sd">Экструзионные тубы</a>
-                  <a href="sd">Другая упаковка</a>
+                  <a href="sd">{t.dropDownContent1}</a>
+                  <a href="sd">{t.dropDownContent2}</a>
+                  <a href="sd">{t.dropDownContent3}</a>
                 </div>
               </li>
             </ul>
           </div>
           <div className="nav-right">
             <div className="nav-languages">
-              <button onClick={() => changeLanguage('RU')} href="RU.uz">RU</button>
+              <button onClick={() => changeLanguage('ru')} href="RU.uz">RU</button>
               <span className="line"></span>
-              <button onClick={() => changeLanguage('RU')} href="UZ.uz">UZ</button>
+              <button onClick={() => changeLanguage('uz')} href="UZ.uz">UZ</button>
             </div>
             <img onClick={changeMode} src={ isDark ? "/light.svg" : "/dark.svg"} alt="dark" />
             <img onClick={toggle} className="toggle-menu" src={(isDark ? "/white-menu.svg":"/menu.svg") && (isVisible ? "/close.svg":"/menu.svg")} alt="menu" />
@@ -103,25 +109,25 @@ export class Header extends Component {
         <div className={isVisible ? "toggle-show toggle-navbar " : " toggle-navbar"}>
           <ul>
             <li>
-              <a href="#product">Продукция</a>
+              <a href="#product">{t.products}</a>
             </li>
             <li>
-              <a href="#certificate">Сертификаты</a>
+              <a href="#certificate">{t.certificate}</a>
             </li>
             <li>
-              <a href="#command">Наша команда</a>
+              <a href="#command">{t.command}</a>
             </li>
             <li>
-              <a href="#about">О нас</a>
+              <a href="#about">{t.about}</a>
             </li>
             <li>
-              <a href="#news">Новости</a>
+              <a href="#news">{t.news}</a>
             </li>
             <li>
-              <a href="#vacancy">Вакансии</a>
+              <a href="#vacancy">{t.vacancy}</a>
             </li>
             <li>
-              <a href="#contact">Контакты</a>
+              <a href="#contact">{t.contact}</a>
             </li>
           </ul>
         </div>

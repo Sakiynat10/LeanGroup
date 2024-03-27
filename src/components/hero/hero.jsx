@@ -9,6 +9,7 @@ import "./hero.scss";
 
 export class Hero extends Component {
   render() {
+    const { languageData: t } = this.props;
     return (
       <section id="hero">
           <Swiper
@@ -27,14 +28,12 @@ export class Hero extends Component {
               <div className="container">
               <div className="hero-carousel">
                 <div className="hero-info">
-                  <h4>LEANGROUP - тубы и этикетки</h4>
-                  <h2>Ламинатные тубы</h2>
+                  <h4>{t.heroTitle}</h4>
+                  <h2>{t.heroSubtitle}</h2>
                   <p>
-                    Используются для производства зубных паст. Широко
-                    применяются в сегменте косметики, пищевой индустрии,
-                    парафармацевтике, бытовой химии и DIY (Do-it-Yourself).
+                    {t.heroDescription}
                   </p>
-                  <button>Каталог</button>
+                  <button>{t.heroBtn}</button>
                 </div>
                 <div className="hero-medias">
                   <a href="#a">
@@ -54,14 +53,12 @@ export class Hero extends Component {
             <div className="container">
               <div className="hero-carousel">
                 <div className="hero-info">
-                  <h4>LEANGROUP - тубы и этикетки</h4>
-                  <h2>Ламинатные тубы</h2>
+                  <h4>{t.heroTitle}</h4>
+                  <h2>{t.heroSubtitle}</h2>
                   <p>
-                    Используются для производства зубных паст. Широко
-                    применяются в сегменте косметики, пищевой индустрии,
-                    парафармацевтике, бытовой химии и DIY (Do-it-Yourself).
+                    {t.heroDescription}
                   </p>
-                  <button>Каталог</button>
+                  <button>{t.heroBtn}</button>
                 </div>
                 <div className="hero-medias">
                   <a href="#a">
@@ -81,14 +78,12 @@ export class Hero extends Component {
               <div className="container">
               <div className="hero-carousel">
                 <div className="hero-info">
-                  <h4>LEANGROUP - тубы и этикетки</h4>
-                  <h2>Ламинатные тубы</h2>
+                  <h4>{t.heroTitle}</h4>
+                  <h2>{t.heroSubtitle}</h2>
                   <p>
-                    Используются для производства зубных паст. Широко
-                    применяются в сегменте косметики, пищевой индустрии,
-                    парафармацевтике, бытовой химии и DIY (Do-it-Yourself).
+                    {t.heroDescription}
                   </p>
-                  <button>Каталог</button>
+                  <button>{t.heroBtn}</button>
                 </div>
                 <div className="hero-medias">
                   <a href="#a">

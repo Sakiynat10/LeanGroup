@@ -10,10 +10,11 @@ import "swiper/css/navigation";
 
 export class Certificate extends Component {
   render() {
+    const {languageData: t} = this.props;
     return (
       <section id="certificate">
         <div className="container">
-          <h1 className="certificate-title">Качество продукции подтверждают <span>сертификаты</span></h1>
+          <h1 className="certificate-title">{t.certificateTitle}<span>{t.certificateSubtitle}</span></h1>
           <Swiper
             spaceBetween={30}
             centeredSlides={true}

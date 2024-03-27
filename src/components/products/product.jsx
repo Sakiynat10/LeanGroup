@@ -5,15 +5,16 @@ import "./product.scss"
 
 export class Product extends Component {
   render() {
+    const {languageData: t} = this.props;
     return (
       <section id="product">
         <div className="container">
-          <h1 className="product-title">Наша <span>продукция</span></h1>
+          <h1 className="product-title">{t.productTitle} <span>{t.productSubtitle}</span></h1>
           <Tabs>
             <TabList className="tab-lists">
-              <Tab  className="list">Ламинатные тубы</Tab>
-              <Tab className="list">Экструзионные тубы</Tab>
-              <Tab className="list">Другая упаковка</Tab>
+              <Tab  className="list">{t.dropDownContent1}</Tab>
+              <Tab className="list">{t.dropDownContent2}</Tab>
+              <Tab className="list">{t.dropDownContent3}</Tab>
             </TabList>
 
             <TabPanel className="tab-images">

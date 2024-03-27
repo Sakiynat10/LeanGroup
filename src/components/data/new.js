@@ -1,3 +1,4 @@
+
 const New = [
     {
         image:'/news-1.png' , 

@@ -3,6 +3,7 @@ import "./footer.scss"
 
 export class Footer extends Component {
   render() {
+    const {languageData:t} = this.props;
     return (
       <footer>
         <div className="container">
@@ -24,56 +25,56 @@ export class Footer extends Component {
           <div className="footer-bottom">
             <ul>
               <li>
-                <a href="#footer">Продукция</a>
+                <a href="#footer">{t.product}</a>
               </li>
               <li>
-                <a href="sd">Ламинатные тубы</a>
+                <a href="sd">{t.dropDownContent1}</a>
               </li>
               <li>
-                <a href="sd">Экструзионные тубы</a>
+                <a href="sd">{t.dropDownContent2}</a>
               </li>
               <li>
-                <a href="sd">Другая упаковка</a>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a href="#footer">Компания</a>
-              </li>
-              <li>
-                <a href="#about">О нас</a>
-              </li>
-              <li>
-                <a href="#command">Наша команда</a>
-              </li>
-              <li>
-                <a href="#certificate">Сертификаты</a>
+                <a href="sd">{t.dropDownContent3}</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="#footer">Разделы</a>
+                <a href="#footer">{t.footerCompany}</a>
               </li>
               <li>
-                <a href="#contact">Контакты</a>
+                <a href="#about">{t.about}</a>
               </li>
               <li>
-                <a href="#news">Новости</a>
+                <a href="#command">{t.command}</a>
               </li>
               <li>
-                <a href="#vacancy">Вакансии</a>
+                <a href="#certificate">{t.certificate}</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="#footer">{t.footerSections}</a>
+              </li>
+              <li>
+                <a href="#contact">{t.contact}</a>
+              </li>
+              <li>
+                <a href="#news">{t.news}</a>
+              </li>
+              <li>
+                <a href="#vacancy">{t.vacancy}</a>
               </li>
             </ul>
             <ul className='number-row'>
-              <p>Беларусь</p>
+              <p>{t.footerCountry1}</p>
               <li>+375 (17) 270 53 77</li>
               <li>+375 (17) 270 53 78</li>
-              <p>Москва</p>
+              <p>{t.footerCountry2}</p>
               <li>+7 (495) 280 73 44</li>
               <li>+7 (495) 280 73 44</li>
             </ul>
             <ul className='number-row--bottom'>
-              <p>Европа</p>
+              <p>{t.footerCountry3}</p>
               <li>+375 (17) 270 53 77</li>
               <p>Екатеринбург</p>
               <li>+7 (495) 280 73 44</li>

@@ -4,10 +4,12 @@ import Footer from '../footer/footer';
 
 export class Layout extends Component {
   render() {
-    
+    const changeLanguage = ( language ) => {
+      console.log( language );
+    }
     return (
       <Fragment>
-        <Header />
+        <Header changeLanguages={changeLanguage}/>
         {this.props.children}
         <Footer />
       </Fragment>
