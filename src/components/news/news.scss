@@ -1,9 +1,10 @@
 #news {
-  margin-top: 90px;
-  margin-bottom: 30px;
+  padding-top: 120px;
+  padding-bottom: 80px;
   h2 {
     text-align: center;
     font-size: 32px;
+    margin-bottom: 40px;
     font-family: sans-serif !important;
   }
   .new-cards {
@@ -23,7 +24,7 @@
     }
   }
   button {
-    margin-top: 20px;
+    margin-top: 40px;
     max-width: 250px;
     width: 100%;
     height: 40px;
@@ -38,5 +39,10 @@
     margin-right: auto;
     font-family: sans-serif !important;
     border-radius: 5px;
+    transition: 0.5s;
+    &:hover{
+        background-color: rgba(239, 124, 0, 1);
+        color: #fff;
+    }
   }
 }

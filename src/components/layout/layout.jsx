@@ -4,6 +4,7 @@ import Footer from '../footer/footer';
 
 export class Layout extends Component {
   render() {
+    
     return (
       <Fragment>
         <Header />

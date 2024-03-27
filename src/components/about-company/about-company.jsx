@@ -10,7 +10,7 @@ export class About extends Component {
             О компании <span className="highlight-title">LEANGROUP</span>
           </h1>
           <div className="about">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/DrE0FShBfF4?si=RIuIJxkT3ZnvAuk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe className="video-card" width="560" height="315" src="https://www.youtube.com/embed/DrE0FShBfF4?si=RIuIJxkT3ZnvAuk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <div className="about-info">
               <p>
                 Компания ООО «ЛеанГрупп» начала свою деятельность в 1999 году и

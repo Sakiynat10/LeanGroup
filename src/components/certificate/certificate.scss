@@ -1,0 +1,25 @@
+#certificate {
+    padding-top: 120px;
+  .swiper-slid {
+    background-image: none;
+    display: flex;
+    img {
+      box-shadow: 2px 2px 10px gray;
+      border-radius: 5px;
+      max-width: 250px;
+      width: 100%;
+    }
+  }
+  .certificate-title {
+    text-align: center;
+    font-family: sans-serif !important;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: -60px;
+    span{
+        color: rgba(239, 124, 0, 1);
+    }
+  }
+}

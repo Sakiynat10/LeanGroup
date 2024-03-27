@@ -11,9 +11,15 @@ import Layout from '../components/layout/layout';
 
 
 export class HomePage extends Component {
+  state = {
+    language: 'en'
+  }
   render() {
+    const changeLanguage = ( language ) => {
+      console.log( language );
+      }
     return (
-      <Layout>
+      <Layout changeLanguages={changeLanguage} >
         <Hero />
         <About />
         <Certificate />
