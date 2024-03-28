@@ -10,6 +10,7 @@ import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
 import UZ from "../components/data/uz";
 import RU from "../components/data/ru";
+import "./HomePage.scss"
 
 export class HomePage extends Component {
   state = {
@@ -28,8 +29,14 @@ export class HomePage extends Component {
 
     const languageData = languagesData[ language ]
 
+    const top = () => {
+      window.scrollTo(0 , 0)
+    }
     return (
       <Fragment>
+      <button onClick={top} className="topbtn">
+        <img src="/top-arrow.png" alt="top" />
+      </button>
         <Header languageData={languageData} changeLanguage={changeLanguage}/>
         <Hero languageData={languageData} />
         <About languageData={languageData} />

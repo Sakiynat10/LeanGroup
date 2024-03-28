@@ -10,8 +10,10 @@ export class Header extends Component {
     isDark:false , 
     isVisible:false
   }
+ 
   
   render() {
+   
     const { changeLanguage , languageData: t } = this.props;
     const {isDark , isVisible} = this.state;
     const changeMode = () =>{
@@ -22,6 +24,7 @@ export class Header extends Component {
       this.setState({isVisible: !isVisible})
       console.log(isVisible);
     }
+    
     // const notify = () => toast("Wow so easy!");
     return (
       <div className="header">
